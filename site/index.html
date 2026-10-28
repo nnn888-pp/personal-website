@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小萍 · 个人作品集</title>
+  <meta name="description" content="小萍的个人作品集：AI 全栈学习与实践记录">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 固定导航 -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#top">小萍<span>集</span></a>
+      <nav class="nav-links">
+        <a href="#top">首页</a>
+        <a href="#about">关于</a>
+        <a href="#works">作品</a>
+        <a href="#journey">经历</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero 区 -->
+  <section class="hero" id="top">
+    <div class="hero-vertical">纸上得来终觉浅 · 绝知此事要躬行</div>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="hero-kicker">PERSONAL&nbsp;PORTFOLIO&nbsp;·&nbsp;2026</p>
+        <h1 class="hero-title">你好，<br>我是<em>小萍</em></h1>
+        <p class="hero-slogan">一名 AI 全栈课程学习者，<br>在这里安放我做过的东西。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#works">看看作品</a>
+          <a class="btn btn-ghost" href="#contact">联系我</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="seal">小萍</div>
+        <div class="hero-frame">
+          <span class="hero-frame-no">No.&nbsp;001</span>
+          <span class="hero-frame-word">集</span>
+          <span class="hero-frame-sub">AI&nbsp;·&nbsp;CODE&nbsp;·&nbsp;CRAFT</span>
+        </div>
+      </div>
+    </div>
+    <a class="hero-scroll" href="#about">向下滚动 ↓</a>
+  </section>
+
+  <!-- 01 关于我 -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-no">01</span>
+        <h2 class="section-title">关于我</h2>
+        <span class="section-rule"></span>
+        <span class="section-en">ABOUT&nbsp;ME</span>
+      </div>
+      <div class="about-grid reveal">
+        <p class="about-intro">
+          我是小萍，一名正在系统学习 AI 全栈开发的学习者。从手写 Tokenizer、Transformer
+          预训练与 LoRA 微调，到浏览器插件、零代码应用与本站的完整开发流程，
+          我习惯把每一个想法快速做成能跑的最小版本，再慢慢打磨。
+          相信动手的分量，胜过纸面的千言。
+        </p>
+        <div class="about-tags">
+          <span class="tag">Python</span>
+          <span class="tag">大模型预训练</span>
+          <span class="tag">LoRA 微调</span>
+          <span class="tag">浏览器插件</span>
+          <span class="tag">HTML / CSS / JS</span>
+          <span class="tag">AI 辅助开发</span>
+          <span class="tag">Git &amp; 部署</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 作品集 -->
+  <section class="section section-alt" id="works">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-no">02</span>
+        <h2 class="section-title">作品集</h2>
+        <span class="section-rule"></span>
+        <span class="section-en">SELECTED&nbsp;WORKS</span>
+      </div>
+      <div class="works-grid">
+
+        <article class="card reveal">
+          <div class="card-img">
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=vintage%20ink%20illustration%20of%20a%20neural%20network%20transformer%20architecture%2C%20hand-drawn%20nodes%20and%20connecting%20lines%20on%20aged%20paper%2C%20red%20seal%20accent%2C%20retro%20magazine%20style%2C%20minimalist&image_size=landscape_4_3" alt="AI 大模型预训练与微调实操" loading="lazy">
+            <span class="card-no">壹</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">AI 大模型预训练与微调</h3>
+            <p class="card-desc">自有 Tokenizer + Transformer 从零实现自回归预训练，完成监督微调与 LoRA 低秩微调全流程实操。</p>
+            <div class="card-tags"><span>Python</span><span>Transformer</span><span>LoRA</span></div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-img">
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=vintage%20magazine%20illustration%20of%20a%20browser%20extension%20grabbing%20photos%20from%20a%20webpage%2C%20ink%20drawing%20on%20old%20paper%2C%20cinnabar%20red%20accents%2C%20retro%20print%20style&image_size=landscape_4_3" alt="电商图片下载浏览器插件" loading="lazy">
+            <span class="card-no">贰</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">电商图片下载插件</h3>
+            <p class="card-desc">浏览器图片批量抓取插件，配套独立官网并通过 GitHub Pages 发布，提供一键下载。</p>
+            <div class="card-tags"><span>浏览器插件</span><span>JavaScript</span><span>GitHub Pages</span></div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-img">
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=vintage%20ink%20illustration%20of%20a%20single-page%20web%20app%20on%20paper%2C%20hand-drawn%20UI%20wireframe%20with%20red%20annotations%2C%20retro%20magazine%20print%20style%2C%20aged%20paper%20texture&image_size=landscape_4_3" alt="零代码平台应用" loading="lazy">
+            <span class="card-no">叁</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">零代码单页应用</h3>
+            <p class="card-desc">纯前端 localStorage 单页应用，无后端无登录，一键发布公开域名并稳定访问。</p>
+            <div class="card-tags"><span>零代码</span><span>localStorage</span><span>单页应用</span></div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-img">
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=vintage%20printing%20press%20and%20magazine%20layout%20ink%20illustration%2C%20hand-drawn%20on%20aged%20paper%2C%20cinnabar%20red%20seal%20stamp%2C%20retro%20editorial%20style&image_size=landscape_4_3" alt="本网站：AI 辅助开发全流程" loading="lazy">
+            <span class="card-no">肆</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">本网站本身</h3>
+            <p class="card-desc">从 PRD、技术设计文档到 AGENTS.md 规范，再由 AI 辅助编码、Git 管理并部署上线的完整实践。</p>
+            <div class="card-tags"><span>AI 辅助开发</span><span>PRD 驱动</span><span>Cloudflare Pages</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 经历时间线 -->
+  <section class="section" id="journey">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-no">03</span>
+        <h2 class="section-title">学习经历</h2>
+        <span class="section-rule"></span>
+        <span class="section-en">JOURNEY</span>
+      </div>
+      <ol class="timeline">
+        <li class="timeline-item reveal">
+          <span class="timeline-date">2026 · 秋</span>
+          <h3>AI 大模型原理实操</h3>
+          <p>手写 Tokenizer，完成 Transformer 预训练、监督微调与 LoRA 微调，跑通从语料到推理的全流程。</p>
+        </li>
+        <li class="timeline-item reveal">
+          <span class="timeline-date">2026 · 秋</span>
+          <h3>浏览器插件开发与发布</h3>
+          <p>独立完成电商图片下载插件，搭建项目官网并发布至 GitHub Pages。</p>
+        </li>
+        <li class="timeline-item reveal">
+          <span class="timeline-date">2026 · 秋</span>
+          <h3>零代码与 AI 编程工具实操</h3>
+          <p>多平台并行完成零代码应用生成与发布，实践 BYOK 方式配置自有模型。</p>
+        </li>
+        <li class="timeline-item reveal">
+          <span class="timeline-date">2026 · 秋</span>
+          <h3>项目开发与部署全流程</h3>
+          <p>以文档驱动开发：PRD → 技术设计 → AGENTS.md → 编码 → 部署本站上线。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 联系页脚 -->
+  <footer class="footer" id="contact">
+    <div class="container footer-inner reveal">
+      <div class="seal seal-footer">小萍</div>
+      <h2 class="footer-title">保持联系</h2>
+      <p class="footer-sub">对这个网站或我的作品感兴趣？欢迎写信给我。</p>
+      <div class="footer-links">
+        <a class="btn btn-primary" href="mailto:2678792095@qq.com">2678792095@qq.com</a>
+        <!-- TODO: 替换为你的 GitHub 地址 -->
+        <a class="btn btn-ghost" href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="footer-copy">© <span id="year">2026</span> 小萍 · 手工打磨，无模板</p>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="返回顶部">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>
