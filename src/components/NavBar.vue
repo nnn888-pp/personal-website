@@ -8,6 +8,7 @@
         <a href="#works">作品</a>
         <a href="#journey">经历</a>
         <a href="#contact">联系</a>
+        <router-link to="/admin">管理</router-link>
       </nav>
     </div>
   </header>

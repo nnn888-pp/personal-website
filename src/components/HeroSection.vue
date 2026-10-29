@@ -5,18 +5,16 @@
       <div class="hero-text">
         <p class="hero-kicker">PERSONAL&nbsp;PORTFOLIO&nbsp;·&nbsp;2026</p>
         <h1 class="hero-title">
-          你好，<br />我是<em>小萍</em>
+          你好，<br />我是<em>{{ profile.nickname || '小萍' }}</em>
         </h1>
-        <p class="hero-slogan">
-          一名 AI 全栈课程学习者，<br />在这里安放我做过的东西。
-        </p>
+        <p class="hero-slogan">{{ profile.slogan || '一名 AI 全栈课程学习者，在这里安放我做过的东西。' }}</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#works">看看作品</a>
           <a class="btn btn-ghost" href="#contact">联系我</a>
         </div>
       </div>
       <div class="hero-art" aria-hidden="true">
-        <div class="seal">小萍</div>
+        <div class="seal">{{ profile.nickname || '小萍' }}</div>
         <div class="hero-frame">
           <span class="hero-frame-no">No.&nbsp;001</span>
           <span class="hero-frame-word">集</span>
@@ -29,5 +27,17 @@
 </template>
 
 <script setup>
-// 纯展示组件
+import { ref, onMounted } from 'vue'
+import api from '../api'
+
+const profile = ref({ nickname: '', slogan: '' })
+
+onMounted(async () => {
+  try {
+    const res = await api.get('/profile')
+    profile.value = res.data
+  } catch (e) {
+    console.error('加载个人信息失败', e)
+  }
+})
 </script>

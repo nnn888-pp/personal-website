@@ -4,11 +4,12 @@
 
 ## 1. 项目底线（不可违反）
 
-- 技术栈固定：**Vue 3 + Vite**，单页应用（SPA），组件化开发
-- 纯前端：无后端服务、无数据库、无登录注册
+- 前端技术栈：**Vue 3 + Vite**，单页应用（SPA），组件化开发
+- 后端技术栈：**Node.js + Express + MySQL**，提供 RESTful API
+- 数据库：**MySQL**（本地用 Navicat 管理），4 张表（profile/tags/works/journey）
 - 样式集中在 `src/styles/style.css`，使用 `:root` CSS 变量管理配色
 - 设计风格必须为**复古杂志风**（配色与字体以技术设计文档第 3.3 节为准），不得照搬通用模板
-- 构建产物在 `dist/`，部署时上传此目录
+- 前端构建产物在 `dist/`，后端在 `server/`，部署时分别处理
 
 ## 2. 开发流程
 
@@ -19,11 +20,18 @@
 
 ## 3. 代码规范
 
+### 前端
 - 每个板块一个 Vue 单文件组件，放在 `src/components/`，命名 PascalCase
 - 所有样式集中在 `src/styles/style.css`，不写内联样式（scoped 样式除外）
 - 颜色/字体一律使用 `:root` 中的 CSS 变量，禁止散落硬编码色值
-- 交互逻辑抽离到 `src/utils/`，组件内只负责视图与数据绑定
+- 数据通过 `src/api/` 封装的 axios 从后端获取，不硬编码在组件里
 - 代码注释用中文，只注释不直观的逻辑
+
+### 后端
+- 路由放在 `server/routes/`，按资源分文件（profile/tags/works/journey）
+- 数据库连接池在 `server/db.js`，路由中通过 `pool` 操作数据库
+- 需要鉴权的接口使用 `requireAdmin` 中间件，校验 `x-admin-password` 请求头
+- 数据库连接信息放在 `server/.env`，不硬编码
 
 ## 4. 遇到 Bug 时
 

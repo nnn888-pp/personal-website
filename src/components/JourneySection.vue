@@ -8,10 +8,10 @@
         <span class="section-en">JOURNEY</span>
       </div>
       <ol class="timeline">
-        <li v-for="item in journey" :key="item.date + item.title" class="timeline-item reveal">
-          <span class="timeline-date">{{ item.date }}</span>
+        <li v-for="item in journey" :key="item.id" class="timeline-item reveal">
+          <span class="timeline-date">{{ item.date_label }}</span>
           <h3>{{ item.title }}</h3>
-          <p>{{ item.desc }}</p>
+          <p>{{ item.description }}</p>
         </li>
       </ol>
     </div>
@@ -19,27 +19,17 @@
 </template>
 
 <script setup>
-// 时间线数据：数组驱动渲染
-const journey = [
-  {
-    date: '2026 · 秋',
-    title: 'AI 大模型原理实操',
-    desc: '手写 Tokenizer，完成 Transformer 预训练、监督微调与 LoRA 微调，跑通从语料到推理的全流程。'
-  },
-  {
-    date: '2026 · 秋',
-    title: '浏览器插件开发与发布',
-    desc: '独立完成电商图片下载插件，搭建项目官网并发布至 GitHub Pages。'
-  },
-  {
-    date: '2026 · 秋',
-    title: '零代码与 AI 编程工具实操',
-    desc: '多平台并行完成零代码应用生成与发布，实践 BYOK 方式配置自有模型。'
-  },
-  {
-    date: '2026 · 秋',
-    title: '项目开发与部署全流程',
-    desc: '以文档驱动开发：PRD → 技术设计 → AGENTS.md → 编码 → 部署本站上线。'
+import { ref, onMounted } from 'vue'
+import api from '../api'
+
+const journey = ref([])
+
+onMounted(async () => {
+  try {
+    const res = await api.get('/journey')
+    journey.value = res.data
+  } catch (e) {
+    console.error('加载学习经历失败', e)
   }
-]
+})
 </script>
